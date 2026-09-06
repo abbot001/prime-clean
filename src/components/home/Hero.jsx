@@ -6,35 +6,38 @@ import { IMAGES } from '@/lib/images';
 export default function Hero() {
   return (
     <section className="relative overflow-hidden">
-      {/* Ambient radial glows */}
+      {/* Ambient brand glows — blue + yellow */}
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -top-40 left-1/2 h-[42rem] w-[42rem] -translate-x-1/2 rounded-full bg-accent/10 blur-[120px]" />
-        <div className="absolute top-24 -right-32 h-[30rem] w-[30rem] rounded-full bg-accent/[0.06] blur-[100px]" />
+        <div className="absolute -top-40 left-1/4 h-[42rem] w-[42rem] -translate-x-1/2 rounded-full bg-primary/20 blur-[130px]" />
+        <div className="absolute top-24 -right-32 h-[30rem] w-[30rem] rounded-full bg-accent/15 blur-[120px]" />
       </div>
 
       <div className="mx-auto max-w-7xl px-5 sm:px-8 pt-10 sm:pt-16 pb-20 sm:pb-28">
         <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
-          {/* Left — narrative */}
+          {/* Left — brand & narrative */}
           <div className="animate-fade-up">
             <span className="capsule">
               <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse-cyan" />
               Live &amp; ready to take orders
             </span>
 
-            <h1 className="display-serif mt-6 text-[3.25rem] leading-[0.95] sm:text-7xl lg:text-[5.5rem] text-foreground text-balance">
-              Fresh Clothes.
-              <br />
-              <span className="text-accent">Zero Hassle.</span>
+            <h1 className="display-serif mt-6 text-[3.5rem] leading-[0.92] sm:text-7xl lg:text-[6rem] text-balance">
+              <span className="text-primary">PRIME</span>{' '}
+              <span className="text-accent">CLEAN</span>
             </h1>
 
+            <p className="mt-4 text-sm font-semibold uppercase tracking-[0.3em] text-foreground/80">
+              Laundry &amp; Dry Cleaning Service
+            </p>
+
             <p className="mt-7 max-w-xl text-lg leading-relaxed text-muted-foreground text-balance">
-              Professional laundry and dry cleaning with convenient pickup and delivery right to your doorstep.
+              Fresh clothes, zero hassle — professional laundry and dry cleaning with convenient pickup and delivery right to your doorstep.
             </p>
 
             <div className="mt-9 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
               <Link
                 to="/book"
-                className="btn-expand inline-flex items-center gap-2 rounded-full bg-accent px-7 py-4 text-base font-semibold text-accent-foreground shadow-[0_18px_40px_-12px_hsl(187_85%_53%/0.6)]"
+                className="btn-expand inline-flex items-center gap-2 rounded-full bg-accent px-7 py-4 text-base font-semibold text-accent-foreground shadow-[0_18px_40px_-12px_hsl(47_100%_58%/0.55)]"
               >
                 Book a Pickup
                 <ArrowRight className="h-5 w-5" />
@@ -47,7 +50,7 @@ export default function Hero() {
               </Link>
             </div>
 
-            <p className="mt-5 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-muted-foreground/80">
+            <p className="mt-5 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-muted-foreground/70">
               Free pickup · No subscription · Cancel anytime
             </p>
 
@@ -70,22 +73,21 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right — visual with orbital rings */}
+          {/* Right — folded, pressed clothes */}
           <div className="relative animate-fade-in">
-            {/* orbital ring motif */}
             <div className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center">
               <div className="orbital h-[118%] w-[118%]" />
             </div>
 
-            <div className="glass-card relative overflow-hidden rounded-[2rem] p-1.5 shadow-[0_40px_100px_-30px_rgba(15,23,42,0.45)]">
+            <div className="glass-card relative overflow-hidden rounded-[2rem] p-1.5 shadow-[0_40px_100px_-30px_rgba(0,0,0,0.7)]">
               <div className="relative overflow-hidden rounded-[1.5rem]">
                 <Image
                   src={IMAGES.hero}
-                  alt="Crisp white linen fabric catching the light"
+                  alt="Neatly folded and pressed clothes"
                   className="aspect-[4/5] w-full sm:aspect-[5/5]"
                   fittingType="fill"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
               </div>
             </div>
 

@@ -43,7 +43,7 @@ export default function HowItWorksSteps({ withCta = false }) {
         <div className="mt-14 flex justify-center">
           <Link
             to="/book"
-            className="btn-expand inline-flex items-center gap-2 rounded-full bg-accent px-7 py-4 text-base font-semibold text-accent-foreground shadow-[0_18px_40px_-12px_hsl(187_85%_53%/0.6)]"
+            className="btn-expand inline-flex items-center gap-2 rounded-full bg-accent px-7 py-4 text-base font-semibold text-accent-foreground shadow-[0_18px_40px_-12px_hsl(47_100%_58%/0.55)]"
           >
             Schedule Your Pickup
             <ArrowRight className="h-5 w-5" />
