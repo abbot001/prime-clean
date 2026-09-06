@@ -11,8 +11,10 @@ export default function SectionHeading({ eyebrow, title, subtitle, align = 'left
     >
       {eyebrow && (
         <div className={cn('flex items-center gap-2.5', align === 'center' && 'justify-center')}>
-          <span className="h-px w-8 bg-accent" />
-          <span className="text-xs font-semibold uppercase tracking-[0.22em] text-accent">{eyebrow}</span>
+          <span className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/[0.06] px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-accent">
+            <span className="h-1 w-1 rounded-full bg-accent" />
+            {eyebrow}
+          </span>
         </div>
       )}
       <h2 className="display-serif mt-4 text-4xl sm:text-5xl text-foreground text-balance">
