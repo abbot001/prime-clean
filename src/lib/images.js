@@ -1,6 +1,6 @@
 // Generated imagery for PRIME CLEAN.
 export const IMAGES = {
-  hero: "https://media.base44.com/images/public/6a9d211d33783c420512c621/d21ef9a5f_generated_32e2e739.jpg",
+  hero: "https://media.base44.com/images/public/6a9d211d33783c420512c621/d9aab0c89_generated_image.png",
   washFold: "https://media.base44.com/images/public/6a9d211d33783c420512c621/79eb4d47b_generated_66938675.jpg",
   dryClean: "https://media.base44.com/images/public/6a9d211d33783c420512c621/475999a85_generated_60c97fd0.jpg",
   iron: "https://media.base44.com/images/public/6a9d211d33783c420512c621/5ddf7705a_generated_ef04f400.jpg",

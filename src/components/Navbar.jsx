@@ -40,8 +40,13 @@ export default function Navbar() {
             <span className="grid h-9 w-9 place-items-center rounded-xl bg-foreground text-background">
               <Sparkles className="h-4 w-4" />
             </span>
-            <span className="display-serif text-xl tracking-tight text-foreground">
-              PRIME<span className="text-accent"> CLEAN</span>
+            <span className="leading-none">
+              <span className="display-serif text-xl tracking-tight text-primary">
+                PRIME<span className="text-accent"> CLEAN</span>
+              </span>
+              <span className="mt-1 block text-[0.55rem] font-semibold uppercase tracking-[0.28em] text-muted-foreground">
+                Laundry &amp; Dry Cleaning
+              </span>
             </span>
           </Link>
 
@@ -76,7 +81,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             <Link
               to="/book"
-              className="btn-expand hidden sm:inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground shadow-[0_8px_24px_-10px_hsl(187_85%_53%/0.6)] hover:bg-accent/90"
+              className="btn-expand hidden sm:inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground shadow-[0_8px_24px_-10px_hsl(47_100%_58%/0.5)] hover:bg-accent/90"
             >
               Book a Pickup
             </Link>

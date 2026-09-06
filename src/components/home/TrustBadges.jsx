@@ -14,7 +14,7 @@ export default function TrustBadges() {
           const Icon = ICONS[i % ICONS.length];
           return (
             <div key={b.label} className="flex flex-col items-center text-center">
-              <span className="grid h-12 w-12 place-items-center rounded-2xl border border-border bg-card text-accent">
+              <span className="glass-card grid h-12 w-12 place-items-center rounded-2xl text-accent">
                 <Icon className="h-5 w-5" />
               </span>
               <p className="mt-3 text-sm font-semibold text-foreground">{b.label}</p>

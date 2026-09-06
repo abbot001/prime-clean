@@ -128,10 +128,12 @@ export default function Contact() {
               <span className="grid h-11 w-11 place-items-center rounded-xl bg-foreground text-background"><MessageCircle className="h-5 w-5" /></span>
               <div><p className="text-xs text-muted-foreground">WhatsApp</p><p className="text-base font-semibold text-foreground">Chat with us instantly</p></div>
             </a>
-            <a href={`mailto:${BUSINESS.email}`} className="soft-glow flex items-center gap-4 rounded-2xl border border-border bg-card p-5">
-              <span className="grid h-11 w-11 place-items-center rounded-xl bg-foreground text-background"><Mail className="h-5 w-5" /></span>
-              <div><p className="text-xs text-muted-foreground">Email</p><p className="text-base font-semibold text-foreground">{BUSINESS.email}</p></div>
-            </a>
+            {BUSINESS.email && (
+              <a href={`mailto:${BUSINESS.email}`} className="soft-glow flex items-center gap-4 rounded-2xl border border-border bg-card p-5">
+                <span className="grid h-11 w-11 place-items-center rounded-xl bg-foreground text-background"><Mail className="h-5 w-5" /></span>
+                <div><p className="text-xs text-muted-foreground">Email</p><p className="text-base font-semibold text-foreground">{BUSINESS.email}</p></div>
+              </a>
+            )}
             <div className="soft-glow rounded-2xl border border-border bg-card p-5">
               <div className="flex items-center gap-3"><span className="grid h-11 w-11 place-items-center rounded-xl bg-foreground text-background"><Clock className="h-5 w-5" /></span><p className="text-sm font-semibold text-foreground">Business hours</p></div>
               <ul className="mt-3 space-y-1.5 text-sm">
@@ -150,11 +152,17 @@ export default function Contact() {
         {/* Map */}
         <div className="mt-10 overflow-hidden rounded-3xl border border-border">
           <iframe
-            title="PRIME CLEAN service area"
+            title="PRIME CLEAN location"
             className="h-72 w-full sm:h-96"
             loading="lazy"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=-74.05%2C40.68%2C-73.85%2C40.82&layer=mapnik&marker=40.745%2C-73.95"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=8.012%2C6.370%2C8.042%2C6.400&layer=mapnik&marker=6.385%2C8.0274"
           />
+        </div>
+        <div className="mt-3 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-sm text-muted-foreground">{BUSINESS.address}</p>
+          <a href={BUSINESS.mapsUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent hover:underline">
+            <MapPin className="h-4 w-4" /> View on Google Maps
+          </a>
         </div>
       </section>
     </>

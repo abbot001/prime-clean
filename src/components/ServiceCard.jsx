@@ -6,7 +6,7 @@ export default function ServiceCard({ service }) {
   return (
     <Link
       to={`/services`}
-      className="soft-glow group relative flex flex-col overflow-hidden rounded-3xl border border-border bg-card"
+      className="soft-glow glass-card group relative flex flex-col overflow-hidden rounded-3xl"
     >
       <div className="relative aspect-[4/3] overflow-hidden">
         <Image
