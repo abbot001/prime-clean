@@ -80,12 +80,14 @@ export default function Footer() {
                   <span>WhatsApp us</span>
                 </a>
               </li>
-              <li>
-                <a href={`mailto:${BUSINESS.email}`} className="flex items-start gap-3 text-muted-foreground hover:text-accent transition-colors">
-                  <Mail className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                  <span>{BUSINESS.email}</span>
-                </a>
-              </li>
+              {BUSINESS.email && (
+                <li>
+                  <a href={`mailto:${BUSINESS.email}`} className="flex items-start gap-3 text-muted-foreground hover:text-accent transition-colors">
+                    <Mail className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                    <span>{BUSINESS.email}</span>
+                  </a>
+                </li>
+              )}
               <li className="flex items-start gap-3 text-muted-foreground">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
                 <span>{BUSINESS.serviceArea}</span>

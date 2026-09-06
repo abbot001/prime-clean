@@ -2,7 +2,7 @@
 const STATS = [
   { value: '48h', label: 'Avg. turnaround' },
   { value: '2,000+', label: 'Happy customers' },
-  { value: '4.9★', label: 'Average rating' },
+  { value: '5.0★', label: 'Average rating' },
   { value: '24/7', label: 'Online booking' },
 ];
 
