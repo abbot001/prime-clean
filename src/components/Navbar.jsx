@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { Menu, X, Sparkles } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { BUSINESS } from '@/lib/business';
 import { cn } from '@/lib/utils';
 
@@ -37,9 +37,11 @@ export default function Navbar() {
       <nav className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="flex h-20 items-center justify-between">
           <Link to="/" className="group flex items-center gap-2.5" aria-label="PRIME CLEAN home">
-            <span className="grid h-9 w-9 place-items-center rounded-xl bg-foreground text-background">
-              <Sparkles className="h-4 w-4" />
-            </span>
+            <img
+              src="https://cdn.phototourl.com/free/2026-09-06-3cb9a6fb-a609-437b-b05e-0c66053033ec.png"
+              alt="PRIME CLEAN"
+              className="h-9 w-9 rounded-xl object-cover"
+            />
             <span className="leading-none">
               <span className="display-serif text-xl tracking-tight text-primary">
                 PRIME<span className="text-accent"> CLEAN</span>
