@@ -1,0 +1,79 @@
+{
+  "name": "Booking",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string",
+      "title": "Full Name"
+    },
+    "phone": {
+      "type": "string",
+      "title": "Phone Number"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "title": "Email"
+    },
+    "address": {
+      "type": "string",
+      "title": "Address"
+    },
+    "city_area": {
+      "type": "string",
+      "title": "City / Area"
+    },
+    "address_notes": {
+      "type": "string",
+      "title": "Address Notes"
+    },
+    "services": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "title": "Selected Services"
+    },
+    "preferred_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Preferred Pickup Date"
+    },
+    "preferred_time": {
+      "type": "string",
+      "title": "Preferred Pickup Time"
+    },
+    "special_instructions": {
+      "type": "string",
+      "title": "Special Instructions"
+    },
+    "order_notes": {
+      "type": "string",
+      "title": "Order Notes"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Pending",
+        "Confirmed",
+        "Pickup Scheduled",
+        "Picked Up",
+        "Cleaning",
+        "Ready",
+        "Out for Delivery",
+        "Completed",
+        "Cancelled"
+      ],
+      "default": "Pending",
+      "title": "Status"
+    }
+  },
+  "required": [
+    "full_name",
+    "phone",
+    "address",
+    "city_area",
+    "preferred_date",
+    "preferred_time"
+  ]
+}
